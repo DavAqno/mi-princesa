@@ -70,13 +70,12 @@
       animation: fadeIn 1s ease;
     }
 
-    
-    .heart {
-      position: absolute;
-      color: #ff69b4;
-      font-size: 20px;
-      animation: floatUp 5s infinite;
-      opacity: 0.7;
+    .floating {
+      animation: float 3s ease-in-out infinite;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px; /* Opcional: agrega bordes redondeados */
+      margin-bottom: 20px; /* Espaciado entre imágenes */
     }
 
     @keyframes fadeIn {
@@ -84,27 +83,21 @@
       to { opacity: 1; }
     }
 
-    @keyframes floatUp {
-      0% { transform: translateY(0); opacity: 1; }
-      100% { transform: translateY(-100vh); opacity: 0; }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
     }
-
-    
-    .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
-    .heart:nth-child(2) { left: 30%; animation-delay: 2s; }
-    .heart:nth-child(3) { left: 50%; animation-delay: 4s; }
-    .heart:nth-child(4) { left: 70%; animation-delay: 1s; }
-    .heart:nth-child(5) { left: 90%; animation-delay: 3s; }
 
   </style>
 </head>
 <body>
-  <!-- Corazones animados en el fondo -->
-  <div class="heart">❤️</div>
-  <div class="heart">❤️</div>
-  <div class="heart">❤️</div>
-  <div class="heart">❤️</div>
-  <div class="heart">❤️</div>
+  <!-- Imágenes con efecto de levitación -->
+  <img src="Miniña1.jpg" alt="Imagen 1" class="floating">
+  <img src="Miniña2.jpg" alt="Imagen 2" class="floating">
+  <img src="Miniña3.jpg" alt="Imagen 3" class="floating">
+  <img src="Miniña4.jpg" alt="Imagen 4" class="floating">
+  <img src="Miniña5.jpg" alt="Imagen 5" class="floating">
 
   <!-- Contenido principal -->
   <div class="container">
