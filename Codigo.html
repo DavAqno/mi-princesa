@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para ti</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #fef5f7;
+      overflow: hidden;
+      color: #333;
+      text-align: center;
+    }
+
+    .container {
+      background: rgba(255, 182, 193, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      margin: 0 20px;
+    }
+
+    h1 {
+      color: #ff69b4;
+      font-size: 2.5em;
+      margin: 0.5em 0;
+    }
+
+    p, #content p {
+      font-size: 1.1em;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 1em;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ff69b4;
+    }
+
+    button {
+      background-color: #ff69b4;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #ff1493;
+    }
+
+    .locked-content {
+      display: none;
+      max-height: 60vh;
+      overflow-y: auto;
+      margin-top: 20px;
+      animation: fadeIn 1s ease;
+    }
+
+    
+    .heart {
+      position: absolute;
+      color: #ff69b4;
+      font-size: 20px;
+      animation: floatUp 5s infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-100vh); opacity: 0; }
+    }
+
+    
+    .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .heart:nth-child(2) { left: 30%; animation-delay: 2s; }
+    .heart:nth-child(3) { left: 50%; animation-delay: 4s; }
+    .heart:nth-child(4) { left: 70%; animation-delay: 1s; }
+    .heart:nth-child(5) { left: 90%; animation-delay: 3s; }
+
+  </style>
+</head>
+<body>
+  <!-- Corazones animados en el fondo -->
+  <div class="heart">❤️</div>
+  <div class="heart">❤️</div>
+  <div class="heart">❤️</div>
+  <div class="heart">❤️</div>
+  <div class="heart">❤️</div>
+
+  <!-- Contenido principal -->
+  <div class="container">
+    <h1>Bienvenida, Diana</h1>
+    <p>Introduce el código.</p>
+
+    <input type="password" id="codeInput" placeholder="Escribe el código">
+    <button onclick="checkCode()">Desbloquear</button>
+
+    <div id="content" class="locked-content">
+      <h2>Mi niña</h2>
+      <p>La primera vez que te vi, fue de tu apariencia tan hermosa de la que me enamoré, aun sin conocerte realmente, sabía que eras una persona que destacaba sin realmente intentarlo, aunque tú no lo notes, siempre lo has hecho.</p>
+      <p>Cuando te veía subir por los reconocimientos que obtenías por ser de las más inteligentes, sabía que no eras como las demás. Por mucho tiempo quise hablarte, pero nunca tuve el valor para hacerlo, simplemente por el miedo a ser muy poco para ti.</p>
+      <p>Muchas de las acciones que hice desde que te vi fueron para poder estar al nivel, y aunque aun no puedo estar seguro de estar a tu nivel, estoy seguro que me seguiré esforzando para ser la persona que mereces, y me alegra saber que estarás conmigo durante ese proceso.</p>
+      <p>Me has demostrado que no debería temer en expresar mis sentimientos, ni al miedo de ser vulnerable, me puedo sentir seguro contigo, y por eso te amo y te agradezco.</p>
+      <p>La vez que en verdad me decidí a hablarte fue de los momentos de más tensión que he sentido, siendo que no quería estropear las cosas. Al hablarte supe que algo conectó, y decidí invitarte a salir por primera vez.</p>
+      <p>Había llegado temprano esa vez, y me dio tiempo para pensar en las cosas que haría para poder impresionarte, y que supieras que valía la pena. Pensaba en intentar ser serio con la idea de que llegaría a gustarte más, pero reflexioné y me di cuenta de que no valía la pena ser alguien que no representaba mi verdadera persona, y que el amor sin realidad no es amor.</p>
+      <p>Decidí por actuar como actuaría, y vi que eras igual a mí; no solo eres increíblemente e irrealmente hermosa, pero también tenías una personalidad con la que podría estar horas hablando, y así fue.</p>
+      <p>Quiero que sepas que el amor que siento por ti nunca podrás comprenderlo, y cuando pienses que pudiste comprenderlo, estarás aún lejos de llegar a entender lo mucho que te amo y lo que sacrificaría por ti.</p>
+      <p>No había encontrado nunca a nadie que tuviera un corazón como el que tienes tú, y por eso hago cosas que nunca hubiera hecho con alguien más. Siempre te daré todo lo que tengo, porque sé que tu corazón lo agradecerá, y aunque llegues a decirme que el hacer estas cosas no es necesario, yo las seguiré haciendo, no porque sienta presión por hacerlas, sino porque las mereces.</p>
+      <p>Si pudiera, te daría todo lo que existe y lo que no, pero aun si no puedo, te daré todo lo que yo posiblemente pueda dar, y si no es posible, haré que sea posible.</p>
+      <p>Realmente te amo, y espero que no entre duda en tu mente de que no sea así. Yo siempre te seguiré amando, y cuando lo dudes, vuelve a leer esta carta, o las cartas que descubrirás con los códigos que encontrarás eventualmente.</p>
+    </div>
+  </div>
+
+  <script>
+    function checkCode() {
+      const input = document.getElementById("codeInput").value;
+      const correctCode = "546520616d6f204469616e61"; // Te amo Diana, y siempre te amare.
+
+      if (input === correctCode) {
+        document.getElementById("content").style.display = "block";
+        document.getElementById("codeInput").style.display = "none";
+      } else {
+        alert("Código incorrecto. Inténtalo de nuevo.");
+      }
+    }
+  </script>
+</body>
+</html>
