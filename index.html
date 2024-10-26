@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Para ti</title>
+  <title>P</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -16,26 +16,6 @@
       overflow: hidden;
       color: #333;
       text-align: center;
-      position: relative; /* Necesario para posicionar las imágenes de fondo */
-    }
-
-    .background-images {
-      position: absolute; /* Para que queden en el fondo */
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 0; /* Colocar las imágenes detrás del contenido */
-      overflow: hidden; /* Para asegurarse de que las imágenes no salgan del contenedor */
-    }
-
-    .background-images img {
-      width: 100%; /* Imágenes a 100% del ancho */
-      height: 100%; /* Imágenes a 100% del alto */
-      object-fit: cover; /* Mantiene la relación de aspecto de las imágenes */
-      filter: blur(5px); /* Agrega desenfoque a las imágenes de fondo */
-      position: absolute;
-      z-index: -1; /* Colocar las imágenes detrás */
     }
 
     .container {
@@ -45,8 +25,6 @@
       box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
       max-width: 600px;
       margin: 0 20px;
-      position: relative; /* Necesario para el z-index */
-      z-index: 1; /* Asegura que el contenido esté por encima de las imágenes */
     }
 
     h1 {
@@ -92,52 +70,41 @@
       animation: fadeIn 1s ease;
     }
 
+    
     .heart {
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      background-color: #ff69b4;
-      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-      position: relative;
-      margin: 5px;
-    }
-
-    .heart::before,
-    .heart::after {
-      content: "";
-      display: block;
-      width: 30px;
-      height: 30px;
-      background-color: #ff69b4;
-      border-radius: 50%;
       position: absolute;
-    }
-
-    .heart::before {
-      top: -15px;
-      left: 0;
-    }
-
-    .heart::after {
-      top: -15px;
-      right: 0;
+      color: #ff69b4;
+      font-size: 20px;
+      animation: floatUp 5s infinite;
+      opacity: 0.7;
     }
 
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-100vh); opacity: 0; }
+    }
+
+    
+    .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .heart:nth-child(2) { left: 30%; animation-delay: 2s; }
+    .heart:nth-child(3) { left: 50%; animation-delay: 4s; }
+    .heart:nth-child(4) { left: 70%; animation-delay: 1s; }
+    .heart:nth-child(5) { left: 90%; animation-delay: 3s; }
+
   </style>
 </head>
 <body>
-  <!-- Imágenes de fondo -->
-  <div class="background-images">
-    <img src="Miniña1.jpg" alt="Imagen 1">
-    <img src="Miniña2.jpg" alt="Imagen 2">
-    <img src="Miniña3.jpg" alt="Imagen 3">
-    <img src="Miniña4.jpg" alt="Imagen 4">
-    <img src="Miniña5.jpg" alt="Imagen 5">
-  </div>
+  <!-- Corazones animados en el fondo -->
+  <div class="heart">❤️</div>
+  <div class="heart">❤️</div>
+  <div class="heart">❤️</div>
+  <div class="heart">❤️</div>
+  <div class="heart">❤️</div>
 
   <!-- Contenido principal -->
   <div class="container">
