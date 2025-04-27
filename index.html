@@ -7,29 +7,22 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Corazones animados -->
   <div id="hearts-container"></div>
 
-  <!-- Contenedor principal -->
   <div class="container">
     <h1>Bienvenida, Diana</h1>
     <p>Introduce el código para desbloquear:</p>
 
-    <input type="password" id="codeInput" placeholder="Escribe el código">
+    <input type="text" id="codeInput" placeholder="Escribe el código...">
     <button id="unlockButton">Desbloquear</button>
     <p id="error-message"></p>
 
-    <div id="content" class="locked-content">
-      <h2>Mi niña</h2>
-      <div id="message-text">
-        <!-- Mensaje de amor -->
-        <p>La primera vez que te vi...</p>
-        <!-- (Aquí irá todo tu texto original) -->
-      </div>
-      <div id="gallery">
-        <!-- Opcionalmente, fotos secretas aparecerán aquí -->
-      </div>
+    <div id="unlocked-content" class="locked-content">
+      <h2 id="unlocked-title"></h2>
+      <div id="unlocked-text"></div>
     </div>
+
+    <div id="counter"></div>
   </div>
 
   <audio id="unlockSound" src="https://cdn.pixabay.com/download/audio/2022/03/16/audio_ccee726c46.mp3" preload="auto"></audio>
